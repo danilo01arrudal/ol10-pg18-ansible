@@ -1,0 +1,5 @@
+[servidores]
+ol10pg18 ansible_host=192.168.122.21 ansible_user=root
+
+[servidores:vars]
+ansible_python_interpreter=/usr/bin/python3
