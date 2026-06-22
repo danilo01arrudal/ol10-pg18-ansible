@@ -1,0 +1,15 @@
+# Ansible managed - {{ ansible_managed }}
+data_directory = '{{ pg_data_dir }}'
+hba_file = '{{ pg_data_dir }}/pg_hba.conf'
+ident_file = '{{ pg_data_dir }}/pg_ident.conf'
+
+listen_addresses = '*'
+port = 5432
+max_connections = {{ pg_config_params.max_connections }}
+shared_buffers = {{ pg_config_params.shared_buffers }}
+effective_cache_size = {{ pg_config_params.effective_cache_size }}
+work_mem = {{ pg_config_params.work_mem }}
+maintenance_work_mem = {{ pg_config_params.maintenance_work_mem }}
+wal_buffers = {{ pg_config_params.wal_buffers }}
+checkpoint_completion_target = {{ pg_config_params.checkpoint_completion_target }}
+default_statistics_target = {{ pg_config_params.default_statistics_target }}
