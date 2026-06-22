@@ -1,0 +1,12 @@
+---
+- name: Inicializar o cluster de dados (se não existir)
+  command: "{{ pg_bin_dir }}/postgresql-{{ pg_version }}-setup initdb"
+  args:
+    creates: "{{ pg_data_dir }}/postgresql.conf"
+  when: not (pg_data_dir + "/postgresql.conf") | file_exists
+
+- name: Habilitar e iniciar o serviço
+  systemd:
+    name: "{{ pg_service }}"
+    enabled: yes
+    state: started
