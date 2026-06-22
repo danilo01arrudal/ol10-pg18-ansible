@@ -1,6 +1,7 @@
 # pg18-ansible
 postgres + ansible
 
+```mermaid
 ansible-postgresql/
 ├── ansible.cfg
 ├── inventory/
@@ -32,3 +33,4 @@ ansible-postgresql/
 │   └── site.yml
 ├── .gitignore
 └── README.md
+```
