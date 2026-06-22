@@ -1,5 +1,4 @@
-# pg18-ansible
-postgres + ansible
+# oracle linux 10 + postgres + bash + ansible
 
 ```
 ansible-postgresql/
