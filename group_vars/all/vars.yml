@@ -1,0 +1,6 @@
+---
+pg_version: 18
+pg_repo: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-10-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+pg_data_dir: "/var/lib/pgsql/{{ pg_version }}/data"
+pg_bin_dir: "/usr/pgsql-{{ pg_version }}/bin"
+pg_service: "postgresql-{{ pg_version }}"
