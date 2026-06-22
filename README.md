@@ -36,8 +36,8 @@ ansible-postgresql/
 
 1. Pré‑requisitos
 
-- Máquina de controle com Ansible instalado (pode ser sua estação ou outra VM).
-- Acesso SSH da máquina de controle para a VM Oracle Linux 10 (com chave pública ou senha).
-- Python 3 instalado na VM alvo (geralmente já vem no Oracle Linux).
-- Repositório GitHub para armazenar o projeto.
+ - Máquina de controle com Ansible instalado (pode ser sua estação ou outra VM).
+ - Acesso SSH da máquina de controle para a VM Oracle Linux 10 (com chave pública ou senha).
+ - Python 3 instalado na VM alvo (geralmente já vem no Oracle Linux).
+ - Repositório GitHub para armazenar o projeto.
 
