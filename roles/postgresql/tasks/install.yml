@@ -1,0 +1,10 @@
+---
+- name: Instalar repositório PGDG
+  dnf:
+    name: "{{ pg_repo }}"
+    state: present
+
+- name: Instalar pacote do servidor PostgreSQL
+  dnf:
+    name: "postgresql{{ pg_version }}-server"
+    state: present
