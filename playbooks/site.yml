@@ -1,0 +1,6 @@
+---
+- name: Provisionar PostgreSQL
+  hosts: servidores
+  become: yes
+  roles:
+    - postgresql
