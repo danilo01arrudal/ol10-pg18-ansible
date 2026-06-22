@@ -1,1 +1,39 @@
+---
+# Versão do PostgreSQL (padrão 18)
+pg_version: 18
 
+# Repositório PGDG para Oracle Linux 10 (x86_64)
+pg_repo: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-10-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+
+# Pacote do servidor
+pg_package: "postgresql{{ pg_version }}-server"
+
+# Diretório de dados
+pg_data_dir: "/var/lib/pgsql/{{ pg_version }}/data"
+
+# Diretório dos binários
+pg_bin_dir: "/usr/pgsql-{{ pg_version }}/bin"
+
+# Nome do serviço systemd
+pg_service: "postgresql-{{ pg_version }}"
+
+# Parâmetros de configuração padrão (classe "pequena")
+pg_config_params:
+  max_connections: 50
+  shared_buffers: "256MB"
+  effective_cache_size: "1GB"
+  work_mem: "4MB"
+  maintenance_work_mem: "64MB"
+  wal_buffers: "4MB"
+  checkpoint_completion_target: 0.9
+  default_statistics_target: 100
+  listen_addresses: "*"
+  port: 5432
+
+# Arquivos de template (caminhos relativos à role)
+pg_conf_template: "postgresql.conf.j2"
+pg_hba_template: "pg_hba.conf.j2"
+
+# Usuário e grupo do PostgreSQL
+pg_user: postgres
+pg_group: postgres
