@@ -1,7 +1,7 @@
 name: Uninstall PostgreSQL
 
 on:
-  workflow_dispatch: # Permite disparar manualmente via interface do GitHub
+  workflow_dispatch: # Apenas execução manual
 
 jobs:
   ansible-uninstall:
