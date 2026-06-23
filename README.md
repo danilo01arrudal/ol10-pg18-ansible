@@ -1,37 +1,38 @@
 # oracle linux 10 + postgres + bash + ansible
 
 ```
-ansible-postgresql/
+.
 ├── ansible.cfg
-├── inventory/
-│   └── production
-├── group_vars/
-│   └── all/
-│       └── vars.yml
-│   └── pg_classe_pequena/
-│       └── vars.yml
-│   └── pg_classe_media/
-│       └── vars.yml
-│   └── pg_classe_grande/
-│       └── vars.yml
-├── roles/
-│   └── postgresql/
-│       ├── tasks/
-│       │   ├── main.yml
-│       │   ├── install.yml
-│       │   ├── configure.yml
-│       │   └── init.yml
-│       ├── templates/
-│       │   ├── postgresql.conf.j2
-│       │   └── pg_hba.conf.j2
-│       ├── vars/
-│       │   └── main.yml
-│       └── handlers/
-│           └── main.yml
-├── playbooks/
-│   └── site.yml
-├── .gitignore
-└── README.md
+├── group_vars
+│   ├── all
+│   │   └── vars.yml
+│   ├── pg_classe_grande
+│   │   └── vars.yml
+│   ├── pg_classe_media
+│   │   └── vars.yml
+│   └── pg_classe_pequena
+│       └── vars.yml
+├── inventory
+│   └── production
+├── playbooks
+│   ├── site.yml
+│   └── uninstall.yml
+├── README.md
+└── roles
+    └── postgresql
+        ├── handlers
+        │   └── main.yml
+        ├── tasks
+        │   ├── configure.yml
+        │   ├── init.yml
+        │   ├── install.yml
+        │   ├── main.yml
+        │   └── uninstall.yml
+        ├── templates
+        │   ├── pg_hba.conf.j2
+        │   └── postgresql.conf.j2
+        └── vars
+            └── main.yml
 ```
 
 1. Pré‑requisitos
