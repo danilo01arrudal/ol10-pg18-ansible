@@ -1,0 +1,33 @@
+---
+- name: Parar e desabilitar o serviço do PostgreSQL
+  systemd:
+    name: "postgresql-{{ pg_version }}"
+    state: stopped
+    enabled: no
+  ignore_errors: yes
+
+- name: Remover os pacotes do PostgreSQL
+  dnf:
+    name: 
+      - "postgresql{{ pg_version }}-server"
+      - "postgresql{{ pg_version }}"
+    state: absent
+
+- name: Remover diretórios de dados e logs
+  file:
+    path: "/var/lib/pgsql/{{ pg_version }}"
+    state: absent
+
+- name: Remover arquivos de configuração
+  file:
+    path: "/etc/pgsql/{{ pg_version }}"
+    state: absent
+
+- name: Remover repositório PGDG
+  dnf:
+    name: pgdg-redhat-repo
+    state: absent
+
+- name: Limpeza final de dependências órfãs
+  dnf:
+    autoremove: yes

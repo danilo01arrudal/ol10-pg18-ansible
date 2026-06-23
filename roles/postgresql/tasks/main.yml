@@ -1,4 +1,9 @@
 ---
+# Fluxo padrão de instalação
 - import_tasks: install.yml
 - import_tasks: init.yml
 - import_tasks: configure.yml
+
+# Fluxo de desinstalação (disparado pela tag 'uninstall')
+- import_tasks: uninstall.yml
+  tags: uninstall

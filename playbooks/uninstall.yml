@@ -1,0 +1,9 @@
+---
+- name: Playbook de Remoção do PostgreSQL
+  hosts: servidores
+  become: yes
+  tasks:
+    - name: Executar desinstalação da role postgresql
+      include_role:
+        name: postgresql
+        tasks_from: uninstall.yml

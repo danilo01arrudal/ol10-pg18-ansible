@@ -1,0 +1,16 @@
+name: Uninstall PostgreSQL
+
+on:
+  workflow_dispatch: # Permite disparar manualmente via interface do GitHub
+
+jobs:
+  ansible-uninstall:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Executar o Playbook de Desinstalação
+        run: |
+          # Ajuste o caminho do seu inventário conforme necessário
+          ansible-playbook -i inventory/production playbooks/uninstall.yml

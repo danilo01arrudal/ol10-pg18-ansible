@@ -3,7 +3,6 @@ name: Deploy PostgreSQL via Ansible
 on:
   push:
     branches:
-	workflow_dispatch:
 	- main  # O workflow será acionado quando você fizer um push na branch main
 
 jobs:
