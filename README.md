@@ -18,6 +18,8 @@ A solução foi projetada para ser:
 - **Integrado**: pipeline CI/CD via GitHub Actions para execução automatizada.
 - **Seguro**: acesso via SSH com chave pública e gerenciamento de secrets.
 
+<img width="1408" height="768" alt="image" src="https://github.com/danilo01arrudal/ol10-pg18-ansible/blob/main/images/000001.png" />
+
 ---
 
 ## 🚀 Principais Funcionalidades
